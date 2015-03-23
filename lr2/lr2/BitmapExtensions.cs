@@ -40,7 +40,9 @@ namespace lr2.ImageBlender
                     for (int x = 0; x < layer.Width; x++)
                     {
                         var pixel = layer.GetPixel(x, y);
-                        int colour = (int)(pixel.R * 0.4 + pixel.G * 0.49 + pixel.B * 0.44);
+                        
+                        int colour = (int)(pixel.R * 0.4 + pixel.G * 0.29 + pixel.B * 0.14);
+                        Console.WriteLine("Cololr" + colour);
                         layer.SetPixel(x, y, Color.FromArgb(colour, colour, colour));
                     }
                 }
